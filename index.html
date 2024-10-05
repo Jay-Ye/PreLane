@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="SMART: Advancing Scalable Map Priors for Driving Topology Reasoning">
+  <meta name="keywords" content="Map Priors, Topology Reasoning, Autonomous Driving">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SMART</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-DVW0FRCNQ8"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/gps_.png">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="https://jay-ye.github.io/">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+    </div>
+
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">SMART: Advancing Scalable Map Priors for Driving Topology Reasoning</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://jay-ye.github.io/">Junjie Ye</a><sup>1*</sup>,</span>
+            <span class="author-block">
+              <a href="https://www.linkedin.com/in/david-paz/">David Paz</a><sup>2</sup>,</span>
+            <span class="author-block">
+              <a href="https://henryzhangzhy.github.io/">Hengyuan Zhang</a><sup>3*</sup>,</span>
+            <span class="author-block">
+              <a href="https://yuliangguo.github.io/">Yuliang Guo</a><sup>2</sup>,</span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=cL4bNBwAAAAJ">Xinyu Huang</a><sup>2</sup>,</span>
+          </div>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://www.hichristensen.com/">Henrik I. Christensen</a><sup>3</sup>,</span>            
+            <span class="author-block">
+              <a href="https://yuewang.xyz">Yue Wang</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://www.liu-ren.com/">Liu Ren</a><sup>2</sup>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>University of Southern California,</span>
+            <span class="author-block"><sup>2</sup>Bosch Research North America, Bosch Center for Artificial Intelligence (BCAI),</span>
+            <span class="author-block"><sup>3</sup>UC San Diego</span>
+          </div>
+
+          <div class="is-size-6 publication-authors">
+            <span class="author-block">* Work done while interned at Bosch Research North America</span>
+          </div>
+
+          <div class="is-size-6 publication-authors">
+            <span class="author-block">(Under review)</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <!-- <span class="link-block">
+                <a href="https://arxiv.org/abs/2311.10813"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span> -->
+              <!-- Video Link. -->
+              <!-- <span class="link-block">
+                <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span> -->
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 
+<section class="section hero is-small" style="height: 650px;">
+  <div class="container is-max-desktop">
+  <div class="columns is-centered has-text-centered">
+    <div class="publication-flipped">
+        <div class="content has-text-justified">
+            <p style="text-align:center;">
+                <video id="bg-video" autoplay loop muted playsinline>
+				<source src="static/videos/agent-driver.mp4" type="video/mp4" width="500" >
+				Your browser does not support the video tag.
+				</video>
+               
+            </p>
+
+        </div>
+      </div>
+    </div>
+</section> -->
+
+<!-- Paper Video -->
+<!-- <section class="section hero is-small is-light" style="height: 550;">
+  <div class="container is-max-desktop">
+  <div class="columns is-centered has-text-centered">
+    <div class="publication-flipped">
+        <div class="content has-text-justified">
+            <p style="text-align:center;">
+                <iframe align="middle" width="800" height="450" src="static/videos/method.mp4" title="video/mp4"  frameborder="100" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;" allowfullscreen></iframe>
+               <br>
+            </p>
+
+        </div>
+      </div>
+    </div>
+</section> -->
+
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+	  <br>  
+	  <br>  
+      <img src="static/images/teaser.png" alt="SMART" style="width: 600px; height: auto; display: block; margin: 0 auto;">
+      <h2 class="subtitle has-text-centered">
+        <span class="dnerf">SMART</span> augments online topology reasoning with robust map priors learned from scalable SD and satellite maps, substantially improving lane perception and topology reasoning.
+      </h2>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Topology reasoning is crucial for autonomous driving as it enables comprehensive understanding of connectivity and relationships between lanes and traffic elements. While recent approaches have shown success in perceiving driving topology using vehicle-mounted sensors, their scalability is hindered by the reliance on training data captured by consistent sensor configurations. We identify that the key factor in scalable lane perception and topology reasoning is the elimination of this sensor-dependent feature. To address this, we propose SMART, a scalable solution that leverages easily available standard-definition (SD) and satellite maps to learn a map prior model, supervised by large-scale geo-referenced high-definition (HD) maps independent of sensor settings. Attributing to scaled training, SMART alone achieves superior offline lane topology understanding using only SD and satellite inputs. Extensive experiments further demonstrate that SMART can be seamlessly integrated into any online topology reasoning method, yielding significant improvements by up to 28% on the OpenLane-V2 benchmark.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+  
+    <!-- Method. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <hr>
+		
+        <!-- <h2 class="title is-3">Method</h2>
+        <br> -->
+        <img src="static/images/outline.png" width="1200" class="center">
+        <h2 class="subtitle has-text-centered">
+          Outline of the proposed approach.
+        <div class="content has-text-justified">
+          <br>  
+          <p>
+            </p><li> 
+              A simple yet effective architecture for map prior learning at scale, achieving impressive lane topology reasoning with SD and satellite inputs.
+            </li>
+            <li> 
+              A map prior model that can be seamlessly integrated into any topology reasoning framework, enhancing robustness and generalizability.
+            </li>
+            <li>
+              Evaluations on the widely-used benchmark OpenLane-V2 underscore the effectiveness of SMART in advancing driving topology reasoning, achieving state-of-the-art performance. The source code of the proposed approach, along with the geospatial map fetching pipeline, will be made publicly available to facilitate future research.
+            </li>
+          <p></p>
+        </div>
+    <h2 class="subtitle has-text-centered">
+      Overall performance comparison on the OpenLane-V2 benchmark.
+		<img src="static/images/results.png" width="600" class="center">
+
+		<div style="height: 100px;"></div>
+
+		<img src="static/images/visualization.png" width="500" class="center">
+	    <h2 class="subtitle has-text-centered">
+        Qualitative comparison of SMART-OL to baselines.		  
+		</h2>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full_width">
+        <hr>
+        <h2 class="title is-3">Demos</h2>
+        <br>
+        <img src="static/images/viz.png" width="1200" class="center">
+        <div class="content has-text-justified">
+
+        </div>
+      </div>
+    </div>
+    <hr>
+  </div>
+</section> -->
+
+<!--
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item seq 010">
+          <video poster="" id="000" autoplay controls muted loop playsinline>
+            <source src="static/videos/scene-0003.mov"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item seq 020">
+          <video poster="" id="000" autoplay controls muted loop playsinline>
+            <source src="static/videos/scene-0003.mov"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item seq 150">
+          <video poster="" id="000" autoplay controls muted loop playsinline>
+            <source src="static/videos/scene-0003.mov"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item seq 150">
+          <video poster="" id="000" autoplay controls muted loop playsinline>
+            <source src="static/videos/scene-0003.mov"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+<!-- Paper Video -->
+<section class="section hero is-small is-light" style="height: 550;">
+  <div class="container is-max-desktop">
+  <div class="columns is-centered has-text-centered">
+    <div class="publication-flipped">
+        <div class="content has-text-justified">
+            <p style="text-align:center;">
+                <iframe align="middle" width="800" height="450" src="static/videos/SMART_demo.mp4" title="video/mp4"  frameborder="100" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;" allowfullscreen></iframe>
+               <br>
+            </p>
+
+        </div>
+      </div>
+    </div>
+</section>
+
+
+<!-- <section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{mao2023agentdriver,
+  author = {Mao, Jiageng and Ye, Junjie and Qian, Yuxi and Pavone, Marco and Wang, Yue},
+  title = {A Language Agent for Autonomous Driving},
+  year = {2023},
+}</code></pre>
+  </div>
+</section> -->
+
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            Website template is borrowed from <a
+              href="https://github.com/nerfies/nerfies.github.io">nerfies</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<div class="columns is-centered">
+	<a href="https://www.revolvermaps.com/livestats/597j246h4mu/"><img src="//rf.revolvermaps.com/h/m/a/0/ff0000/50/0/597j246h4mu.png" width="100" height="50" alt="Map" style="border:0;"></a>
+</div>
+
+</body>
+</html>
